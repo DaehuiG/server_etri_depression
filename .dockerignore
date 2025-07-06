@@ -1,0 +1,17 @@
+# .dockerignore
+
+# Git 저장소 정보 제외
+.git
+
+# Python 가상환경 제외
+.venv/
+venv/
+
+# Python 캐시 파일 제외
+__pycache__/
+*.pyc
+*.pyo
+
+# 기타 개발용 파일 및 폴더
+.vscode/
+.idea/
