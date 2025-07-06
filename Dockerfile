@@ -2,6 +2,7 @@ FROM pytorch/pytorch:2.7.0-cuda12.6-cudnn9-runtime
 
 ENV DEBIAN_FRONTEND=noninteractive
 ENV TZ=Asia/Seoul
+ENV PYTHONPATH=/app
 
 RUN apt-get update && apt-get install -y \
 	supervisor \
@@ -19,7 +20,10 @@ COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
 RUN mkdir /models
 
+EXPOSE 7000
+EXPOSE 7001
 EXPOSE 8000
 EXPOSE 8001
+
 
 CMD ["/usr/bin/supervisord"]

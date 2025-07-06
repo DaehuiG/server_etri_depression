@@ -1,7 +1,8 @@
 # fastapi_app/main.py
 
-from fastapi import FastAPI
-from .routers import report_router
+from fastapi import FastAPI, Response, status
+from .routers import chat_router, diagnosis_router, hrv_router
+
 
 # FastAPI 애플리케이션 생성
 app = FastAPI(

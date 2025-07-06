@@ -4,3 +4,5 @@ httpx
 pandas
 numpy
 matplotlib
+pydantic>=2.0
+pydantic-settings
